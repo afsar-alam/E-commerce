@@ -2,16 +2,74 @@
     padding: 0;
     margin: 0;
 }
-body,html{
+body{
     font-family: lato;
+    /* overflow:hidden; */
     overflow-x:hidden;
 }
-.overflow-hidden{
-    /* overflow-x: hidden; */
-}
-#navigation-bar-container{
+   
+.loading-bar{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    /* background-color:#2980b9; */
+    background-color: rgb(255, 217, 1);
+  
+    background-size: cover;
+    /* display:flex;
+    justify-content: center;
+    align-items: center; */
+    
+} 
+.spinner {
+    width: 40px;
+    height: 40px;
+  
+    position: relative;
+    margin: 100px auto;
+  }
+  
+  .double-bounce1, .double-bounce2 {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #333;
+    opacity: 0.6;
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+    -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+    animation: sk-bounce 2.0s infinite ease-in-out;
+  }
+  
+  .double-bounce2 {
+    -webkit-animation-delay: -1.0s;
+    animation-delay: -1.0s;
+  }
+  
+  @-webkit-keyframes sk-bounce {
+    0%, 100% { -webkit-transform: scale(0.0) }
+    50% { -webkit-transform: scale(1.0) }
+  }
+  
+  @keyframes sk-bounce {
+    0%, 100% { 
+      transform: scale(0.0);
+      -webkit-transform: scale(0.0);
+    } 50% { 
+      transform: scale(1.0);
+      -webkit-transform: scale(1.0);
+    }
+  }
  
+.overflow-hidden{
+    overflow-x: hidden;
 }
+  
  
 /* navigation-bar-start */
 .nav{
@@ -590,13 +648,16 @@ label #cancel{
      text-decoration: underline;
  }
  #copyright-container{
+     width: 100%;
     height: 10vh;
+    text-align: center;
 }
 .copyright-heading{
-    margin-left:70px;
-    color: #666666;
    
+    padding-top: 20px;
+    color: #666666;
     margin-top:20vh;
+    text-align: center;
 }
 @media(max-width:1768px){
     .products-items{
@@ -984,7 +1045,7 @@ label #cancel{
         }
         .contact-lorem-heading{
             font-size:0.8rem ;
-            padding:20px 230px  40px 120px;
+            padding:20px 250px  40px 150px;
         }
         .shopping-bags{
             width:310px;

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>E-commerce</title>
      <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -12,6 +12,13 @@
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
+    <!-- <div class="loading-bar">
+         <div class="spinner">
+  <div class="double-bounce1"></div>
+  <div class="double-bounce2"></div>
+</div>
+         
+    </div> -->
     <div class="overflow-hidden">
     <div id="navigation-bar-container">
        
@@ -63,7 +70,6 @@
 
     <div id="clothes-jewelry-cosmetics-container">
         <div class="products-items">
-        <!-- <h1 class="clothing">clothing</h1> -->
         <img  class="product-image"src="cloth.jpg" alt="">
         <div class="overlay">
             <div class="content">
@@ -339,7 +345,7 @@
 
         </div> 
         <!--fourth  -->
-
+ 
         <div class="payment-choice">
             <div class="payment-details">
                 <img src="right.png" alt="">
@@ -348,7 +354,7 @@
             <p class="details-heading">Satisfaction</br>
                 guarantee</p>
 
-        </div> 
+        </div>  
         <!-- fifth -->
         <div class="payment-choice">
             <div class="payment-details">
@@ -500,6 +506,13 @@
 
 
 $(".number-heading").counterUp({delay:10,time:1000});
+
+setTimeout(() => {
+
+document.querySelector('.loading-bar').style.display = 'none';
+document.querySelector('body').setAttribute('style','overflow:scroll;');
+
+}, 9000);
  
 </script>
     
